@@ -1,6 +1,6 @@
 // icon1 ve icon1-content öğelerini seçin
-const icon1 = document.querySelector(".main-icon i");
-const icon1Content = document.querySelector(".icon-content");
+const icon1 = document.querySelector(".main-icon1 i");
+const icon1Content = document.querySelector(".icon1-content");
 
 // icon1 öğesine tıklama olayı ekleyin
 icon1.addEventListener("click", function () {
@@ -11,8 +11,6 @@ icon1.addEventListener("click", function () {
     icon1Content.style.display = "block"; // Görünür yap
   }
 });
-
-
 
 // btn1 butonunu seçin
 const btn1 = document.querySelector(".btn1");
@@ -30,9 +28,6 @@ btn1.addEventListener("click", function () {
   caseElement.style.display = "block";
 });
 
-
-
-
 // case
 const ekranTxt = document.querySelector(".ekrankarti p");
 const ekrankarti = document.querySelector(".ekrankarti");
@@ -44,6 +39,8 @@ ekrankarti.addEventListener("click", function () {
     ekranTxt.style.display = "none";
   }
 });
+
+// ram
 const ramTxt = document.querySelector(".ram p");
 const ram = document.querySelector(".ram");
 
@@ -55,4 +52,13 @@ ram.addEventListener("click", function () {
     ramTxt.style.display = "none";
     ram.style.width = "4.5%";
   }
+});
+
+// icon
+const iconHome = document.querySelector(".icon-home");
+
+iconHome.addEventListener("click", function () {
+  main.style.display = "block";
+
+  caseElement.style.display = "none";
 });

@@ -1,4 +1,4 @@
-* {
+ *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,8 +10,15 @@ body {
 
 img {
   width: 100%;
-  height: calc(100vh - 132px);
-  object-fit: center;
+  height: calc(100vh - 130px);
+  object-position: center;
+}
+.icon-nav {
+  border-radius: 50%;
+}
+.case {
+  display: none;
+  background-color: black;
 }
 
 /* ! MAİN */
@@ -19,62 +26,48 @@ img {
 .img-main {
   position: relative;
 }
-.main-icon {
+.main-icon1 {
   position: absolute;
-  right: 20%;
-  top: 30%;
-  font-size: 20px;
-}
-
-.main-icon i:hover {
   color: orange;
-}
-
-.main-icon i {
-  position: relative;
+  right: 20%;
+  top: 26%;
+  font-size: 20px;
   cursor: pointer;
-  color: rgba(255, 166, 0, 0.596);
 }
-
-.icon-content {
+.main-icon1 i {
+  position: relative;
+}
+.icon1-content {
   position: absolute;
   background-color: rgba(128, 128, 128, 0.418);
   left: -900%;
   height: 200px;
-  /* display: none; */
-  overflow-y: scroll;
-  border-radius: 25px;
-  text-align: center;
-}
-
-.icon-content li {
-  color: white;
-  font-size: 15px;
-}
-
-.icon-content li:first-child {
-  color: black;
-  text-transform: uppercase;
-  font-weight: 500;
-  border-bottom: 1px solid rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.icon-content::-webkit-scrollbar {
   display: none;
+  overflow-y: scroll;
+  text-align: center;
+  border-radius: 25px;
+  padding: 2px;
+}
+.icon1-content::-webkit-scrollbar {
+  display: none;
+}
+.icon1-content li h2 {
+  color: goldenrod;
+}
+.icon1-content li p {
+  color: white;
+  font-size: 13px;
 }
 
 /* * MAİN */
 
 /* !CASE */
 
-.case {
-  background-color: black;
-  display: none;
+.case-img {
+  position: relative;
 }
-
 .ekrankarti {
-  border: 3px solid rgba(255, 255, 0, 0.616);
+  border: 3px solid green;
   width: 56%;
   height: 21%;
   position: absolute;
@@ -85,13 +78,14 @@ img {
   cursor: pointer;
   padding: 5px;
   transition: 1s ease all;
+  animation: borderAnimation1 3s infinite alternate;
 }
 .ekrankarti::-webkit-scrollbar {
   display: none;
 }
 .ekrankarti:hover {
   opacity: 1;
-  box-shadow: 1px 1px 5px 1px yellow;
+  box-shadow: 1px 1px 5px 1px green;
 }
 .ekrankarti p {
   display: none;
@@ -101,8 +95,16 @@ img {
   color: red;
 }
 
-.case-img {
-  position: relative;
+@keyframes borderAnimation1 {
+  0% {
+    border-color: rgb(0, 161, 0);
+  }
+  50% {
+    border-color: rgb(2, 109, 2);
+  }
+  100% {
+    border-color: rgb(1, 77, 1);
+  }
 }
 
 .ram {
@@ -117,6 +119,7 @@ img {
   cursor: pointer;
   padding: 5px;
   transition: 1s ease all;
+  animation: borderAnimation2 3s infinite alternate;
 }
 .ram:hover {
   opacity: 1;
@@ -128,4 +131,116 @@ img {
 .ram p {
   display: none;
   color: white;
+}
+
+@keyframes borderAnimation2 {
+  0% {
+    border-color: rgba(255, 255, 0, 0.616);
+  }
+  50% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: rgba(255, 255, 0, 0.616);
+  }
+}
+
+.cpu {
+  border: 3px solid rgba(255, 255, 0, 0.616);
+  width: 15%;
+  height: 19%;
+  position: absolute;
+  left: 27%;
+  top: 26%;
+  opacity: 0;
+  overflow-y: scroll;
+  cursor: pointer;
+  padding: 5px;
+  transition: 1s ease all;
+}
+.cpu::-webkit-scrollbar {
+  display: none;
+}
+.cpu:hover {
+  opacity: 1;
+  box-shadow: 1px 1px 5px 1px yellow;
+}
+.cpu p {
+  display: none;
+  color: white;
+}
+.cpu span {
+  color: red;
+}
+
+.fan {
+  border: 3px solid rgba(255, 255, 0, 0.616);
+  width: 64%;
+  height: 8%;
+  position: absolute;
+  left: 15%;
+  top: 14%;
+  opacity: 0;
+  overflow-y: scroll;
+  cursor: pointer;
+  padding: 5px;
+  transition: 1s ease all;
+}
+.fan::-webkit-scrollbar {
+  display: none;
+}
+.fan:hover {
+  opacity: 1;
+  box-shadow: 1px 1px 5px 1px yellow;
+}
+.fan p {
+  display: none;
+  color: white;
+}
+.fan span {
+  color: red;
+}
+
+.pcu {
+  border: 3px solid rgba(255, 255, 0, 0.616);
+  width: 22%;
+  height: 12%;
+  position: absolute;
+  left: 13%;
+  top: 77%;
+  opacity: 0;
+  overflow-y: scroll;
+  cursor: pointer;
+  padding: 5px;
+  transition: 1s ease all;
+  animation: borderAnimation 3s infinite alternate;
+}
+.pcu::-webkit-scrollbar {
+  display: none;
+}
+.pcu:hover {
+  opacity: 1;
+  box-shadow: 1px 1px 5px 1px yellow;
+}
+.pcu p {
+  display: none;
+  color: white;
+}
+.pcu span {
+  color: red;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: rgba(255, 255, 0, 0.616);
+  }
+  50% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: rgba(255, 255, 0, 0.616);
+  }
+}
+.icon-nav {
+  border-radius: 50%;
 }
