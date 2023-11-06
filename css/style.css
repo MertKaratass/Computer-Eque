@@ -1,4 +1,4 @@
- *{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,15 +10,80 @@ body {
 
 img {
   width: 100%;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 132px);
   object-position: center;
 }
+
 .icon-nav {
   border-radius: 50%;
 }
 .case {
   display: none;
-  background-color: black;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    101deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9734023876404494) 22%,
+    rgba(86, 60, 126, 1) 77%,
+    rgba(0, 7, 65, 1) 100%
+  );
+}
+
+.monitor {
+  display: none;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    101deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9734023876404494) 22%,
+    rgba(86, 60, 126, 1) 77%,
+    rgba(0, 7, 65, 1) 100%
+  );
+}
+
+/*! Navbar */
+
+.navbar {
+  background: rgb(255, 0, 71);
+  background: linear-gradient(
+    101deg,
+    rgba(255, 0, 71, 1) 0%,
+    rgba(95, 198, 19, 0.9734023876404494) 0%,
+    rgba(3, 0, 110, 1) 85%
+  );
+}
+
+.renk1 {
+  color: rgba(255, 255, 255, 0.945);
+}
+
+.renk1:hover {
+  color: red;
+}
+
+.renk2 {
+  color: rgba(255, 255, 255, 0.774);
+}
+.renk2:hover {
+  color: red;
+}
+.renk3 {
+  color: rgba(255, 255, 255, 0.699);
+}
+.renk3:hover {
+  color: red;
+}
+.renk4 {
+  color: rgba(255, 255, 255, 0.623);
+}
+.renk4:hover {
+  color: red;
+}
+.renk5 {
+  color: rgba(255, 255, 255, 0.548);
+}
+.renk5:hover {
+  color: red;
 }
 
 /* ! MAİN */
@@ -33,6 +98,7 @@ img {
   top: 26%;
   font-size: 20px;
   cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 .main-icon1 i {
   position: relative;
@@ -59,6 +125,41 @@ img {
   font-size: 13px;
 }
 
+.main-icon2 {
+  position: absolute;
+  color: orange;
+  left: 49%;
+  top: 26%;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+.main-icon2 i {
+  position: relative;
+}
+.icon2-content {
+  position: absolute;
+  background-color: rgba(128, 128, 128, 0.418);
+  left: -450%;
+  width: 200px;
+  height: 200px;
+  display: none;
+  overflow-y: scroll;
+  text-align: center;
+  border-radius: 25px;
+  padding: 2px;
+}
+.icon2-content::-webkit-scrollbar {
+  display: none;
+}
+.icon2-content li h2 {
+  color: goldenrod;
+}
+.icon2-content li p {
+  color: white;
+  font-size: 13px;
+}
+
 /* * MAİN */
 
 /* !CASE */
@@ -79,6 +180,7 @@ img {
   padding: 5px;
   transition: 1s ease all;
   animation: borderAnimation1 3s infinite alternate;
+  border-radius: 5px;
 }
 .ekrankarti::-webkit-scrollbar {
   display: none;
@@ -120,6 +222,7 @@ img {
   padding: 5px;
   transition: 1s ease all;
   animation: borderAnimation2 3s infinite alternate;
+  border-radius: 5px;
 }
 .ram:hover {
   opacity: 1;
@@ -128,6 +231,11 @@ img {
 .ram::-webkit-scrollbar {
   display: none;
 }
+
+.ram span {
+  color: red;
+}
+
 .ram p {
   display: none;
   color: white;
@@ -157,13 +265,15 @@ img {
   cursor: pointer;
   padding: 5px;
   transition: 1s ease all;
+  animation: borderAnimation5 3s infinite alternate;
+  border-radius: 5px;
 }
 .cpu::-webkit-scrollbar {
   display: none;
 }
 .cpu:hover {
   opacity: 1;
-  box-shadow: 1px 1px 5px 1px yellow;
+  box-shadow: 1px 1px 5px 1px rgb(255, 51, 0);
 }
 .cpu p {
   display: none;
@@ -171,6 +281,18 @@ img {
 }
 .cpu span {
   color: red;
+}
+
+@keyframes borderAnimation5 {
+  0% {
+    border-color: rgba(255, 60, 0, 0.616);
+  }
+  50% {
+    border-color: rgb(255, 0, 0);
+  }
+  100% {
+    border-color: rgba(255, 72, 0, 0.616);
+  }
 }
 
 .fan {
@@ -185,13 +307,14 @@ img {
   cursor: pointer;
   padding: 5px;
   transition: 1s ease all;
+  animation: borderAnimation4 3s infinite alternate;
 }
 .fan::-webkit-scrollbar {
   display: none;
 }
 .fan:hover {
   opacity: 1;
-  box-shadow: 1px 1px 5px 1px yellow;
+  box-shadow: 1px 1px 5px 1px rgb(68, 0, 255);
 }
 .fan p {
   display: none;
@@ -201,7 +324,22 @@ img {
   color: red;
 }
 
-.pcu {
+@keyframes borderAnimation4 {
+  0% {
+    border-color: rgba(38, 0, 255, 0.616);
+  }
+  50% {
+    border-color: rgb(98, 0, 255);
+  }
+  100% {
+    border-color: rgba(47, 0, 255, 0.616);
+  }
+}
+.icon-nav {
+  border-radius: 50%;
+}
+
+.psu {
   border: 3px solid rgba(255, 255, 0, 0.616);
   width: 22%;
   height: 12%;
@@ -213,34 +351,192 @@ img {
   cursor: pointer;
   padding: 5px;
   transition: 1s ease all;
-  animation: borderAnimation 3s infinite alternate;
+  animation: borderAnimation3 3s infinite alternate;
 }
-.pcu::-webkit-scrollbar {
+
+.psu::-webkit-scrollbar {
   display: none;
 }
-.pcu:hover {
+.psu:hover {
   opacity: 1;
-  box-shadow: 1px 1px 5px 1px yellow;
+  box-shadow: 1px 1px 5px 1px rgb(0, 204, 255);
 }
-.pcu p {
+.psu p {
   display: none;
   color: white;
 }
-.pcu span {
+.psu span {
   color: red;
 }
 
-@keyframes borderAnimation {
+@keyframes borderAnimation3 {
   0% {
-    border-color: rgba(255, 255, 0, 0.616);
+    border-color: rgba(0, 183, 255, 0.616);
   }
   50% {
-    border-color: yellow;
+    border-color: rgb(0, 119, 255);
   }
   100% {
-    border-color: rgba(255, 255, 0, 0.616);
+    border-color: rgba(0, 195, 255, 0.616);
   }
 }
 .icon-nav {
   border-radius: 50%;
+}
+
+/*! MONİTOR */
+.monitor-img {
+  position: relative;
+}
+
+.mbtn1 {
+  position: absolute;
+  top: 13%;
+  left: 5%;
+  width: 25%;
+}
+
+.mbtn2 {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 25%;
+}
+.mbtn3 {
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  width: 25%;
+}
+.mbtn4 {
+  position: absolute;
+  top: 49%;
+  left: 5%;
+  width: 25%;
+}
+.mbtn5 {
+  position: absolute;
+  top: 61%;
+  left: 5%;
+  width: 25%;
+}
+
+.lcd-txt {
+  display: none;
+  position: absolute;
+  width: 54%;
+  height: 60.8%;
+  top: 39%;
+  left: 68.4%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.lcd-txt span {
+  color: red;
+}
+
+.lcd-txt::-webkit-scrollbar {
+  display: none;
+}
+
+.led-txt {
+  display: none;
+  position: absolute;
+  width: 54%;
+  height: 60.8%;
+  top: 39%;
+  left: 68.4%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.led-txt span {
+  color: red;
+}
+
+.led-txt::-webkit-scrollbar {
+  display: none;
+}
+
+.oled-txt {
+  display: none;
+  position: absolute;
+  width: 54%;
+  height: 60.8%;
+  top: 39%;
+  left: 68.4%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.oled-txt span {
+  color: red;
+}
+
+.oled-txt::-webkit-scrollbar {
+  display: none;
+}
+
+.crt-txt {
+  display: none;
+  position: absolute;
+  width: 54%;
+  height: 60.8%;
+  top: 39%;
+  left: 68.4%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.crt-txt span {
+  color: red;
+}
+
+.crt-txt::-webkit-scrollbar {
+  display: none;
+}
+
+.curved-txt {
+  display: none;
+  position: absolute;
+  width: 54%;
+  height: 60.8%;
+  top: 39%;
+  left: 68.4%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.curved-txt span {
+  color: red;
+}
+
+.curvet-txt::-webkit-scrollbar {
+  display: none;
+}
+
+/*! MONİTOR */
+
+/* !footer */
+
+.footer {
+  background: rgb(255, 0, 71);
+  background: linear-gradient(
+    101deg,
+    rgba(255, 0, 71, 1) 0%,
+    rgba(3, 0, 110, 1) 0%,
+    rgba(14, 24, 99, 1) 45%,
+    rgba(95, 198, 19, 0.9734023876404494) 100%
+  );
 }
